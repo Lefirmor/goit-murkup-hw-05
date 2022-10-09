@@ -232,14 +232,19 @@ body {
   pointer-events: none;
   opacity: 0;
 }
+.backdrop.is-hidden .modal{
+  transform: translate(-50%, -50%) scale(0.9);
+}
 .modal {
   position: absolute;
   min-width: 528px;
   min-height: 581px;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
   background-color: white;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
 .cross-button-div {
   display: flex;
@@ -644,10 +649,10 @@ body {
   bottom: 0;
   right: 0;
   background-color: rgba(33, 150, 243, 0.9);
-  transform: translateY(150%);
+  transform: translateY(105%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.card {
+.portfolio-img-list .wrapper {
   overflow: hidden;
 }
 .card:hover .card-overlay {
